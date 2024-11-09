@@ -8,7 +8,7 @@ class dff_monitor extends uvm_monitor;
   
   function new(string name="dff_monitor",uvm_component parent);
     super.new(name,parent);
-    `uvm_info("monitor class","constructor",UVM_MEDIUM)
+    `uvm_info("MONITOR","constructor",UVM_MEDIUM)
   endfunction
   
   function void build_phase(uvm_phase phase);
@@ -16,7 +16,7 @@ class dff_monitor extends uvm_monitor;
     item_collected_port=new("item_collected_port",this);
     
     if(!uvm_config_db #(virtual dff_intf)::get(this,"","intf",intf))
-      `uvm_fatal("no_intf in driver","virtual interface get failed from config db");
+      `uvm_fatal("MONITOR","virtual interface get failed from config db");
   endfunction
   
   task run_phase(uvm_phase phase);
