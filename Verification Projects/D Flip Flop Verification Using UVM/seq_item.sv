@@ -7,7 +7,7 @@ class dff_seq_item extends uvm_sequence_item;
   
   function new(string name="dff_seq_item");
     super.new(name);
-    `uvm_info("sequence item class","constructor",UVM_MEDIUM)
+    `uvm_info("SEQUENCE ITEM","constructor",UVM_MEDIUM)
   endfunction
   
   constraint rst_en {rst dist {1:=10 , 0:=5};}
